@@ -23,7 +23,7 @@ jobs:
       matrix:
         node-version: [18.x, 20.x, 22.x]
     steps:
-    - name: Checout Code
+    - name: Checkout Code
       uses: actions/checkout@v4
     - name: Set up Node.js
       uses: actions/setup-node@v4
