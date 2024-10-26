@@ -32,3 +32,4 @@ jobs:
     - name: Install Dependencies
       working-directory: ./app
       run: npm ci
+    - run: npm test
