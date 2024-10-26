@@ -6,12 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  MYSQL_DATABASE: "pas"
-  MYSQL_USER: "root"
-  MYSQL_PASSWORD: ""
-  MYSQL_HOST: "127.0.0.1"
-
 defaults:
   run:
     working-directory: ./app
@@ -19,6 +13,11 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      MYSQL_DATABASE: "pas"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: ""
+      MYSQL_HOST: "127.0.0.1"
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
